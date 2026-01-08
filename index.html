@@ -1,26 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Fire Whistle</title>
-</head>
+<html>
 <body>
 
-<h2>🚨 Autoplay Fire Whistle Test</h2>
+<h2>🚨 Fire Whistle</h2>
+<p>Tap anywhere to play</p>
 
-<audio
-  id="whistle"
-  src="https://raw.githubusercontent.com/dhalonen/firewhistle/main/12_30-FireWhistle.mp3"
-  autoplay
-  preload="auto"
->
+<audio id="whistle" preload="auto">
+  <source src="https://raw.githubusercontent.com/dhalonen/firewhistle/main/12_30-FireWhistle.mp3" type="audio/mpeg">
 </audio>
 
-<p>If the sound does not start automatically, tap the button below.</p>
-
-<button onclick="document.getElementById('whistle').play()">
-  ▶️ Play Sound
-</button>
+<script>
+  document.body.addEventListener('click', () => {
+    document.getElementById('whistle').play();
+  }, { once: true });
+</script>
 
 </body>
 </html>
