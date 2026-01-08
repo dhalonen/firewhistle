@@ -1,17 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fire Whistle</title>
+</head>
 <body>
 
-<h2>🚨 Calumet Fire Whistle</h2>
+<h2>🚨 Fire Whistle Test</h2>
 
-<button onclick="document.getElementById('audio').play()">
-  ▶️ Play Calumet Fire Whistle
-</button>
-
-<audio id="audio" preload="auto">
-  <source src="https://raw.githubusercontent.com/dhalonen/firewhistle/main/12_30-FireWhistle.mp3"
-          type="audio/mpeg">
+<audio
+  id="whistle"
+  src="https://raw.githubusercontent.com/dhalonen/firewhistle/main/12_30-FireWhistle.mp3"
+  autoplay
+  preload="auto"
+>
 </audio>
+
+<p>If the sound does not start automatically, tap the button below.</p>
+
+<button onclick="document.getElementById('whistle').play()">
+  ▶️ Play Sound
+</button>
 
 </body>
 </html>
